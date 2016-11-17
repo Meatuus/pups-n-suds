@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 	root 'users#index'
 
 	get '/users', to: 'users#index'
+	get '/about', to: 'users#about'
+	get '/rates', to: 'users#rates'
+	
 
 end
