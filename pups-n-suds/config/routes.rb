@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 	root 'users#index'
 
 	# get '/users', to: 'users#index'
-  resources :users
+  resources :users, only: [:index, :new, :create, :show, :edit, :update]
 	get '/about', to: 'users#about'
 	get '/rates', to: 'users#rates'
 
+  resource :sessions, only: [:new, :create, :destroy]
 
 end
